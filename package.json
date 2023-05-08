@@ -11,7 +11,7 @@
     "copy:js": "copyfiles -u 1 ./src/js/**/* dist",
     "copy:assets": "copyfiles -u 1 ./src/assets/**/* dist",
     "copy": "npm-run-all --parallel copy:*",
-    "html": "npm-run-all --parallel copy:html html:tailwind",
+    "html": "npm-run-all --parallel copy:html",
     "watch:html": "onchange \"src/*.html\" -- npm run html",
     "watch:js": "onchange \"src/js/**/*\" -- npm run copy:js",
     "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
