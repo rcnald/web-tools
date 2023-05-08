@@ -1,4 +1,6 @@
-<h1 align="center">Project Template</h1>
+<h1 align="center">Web Tools</h1>
+
+<p align="center">A website grouping all webtools that I use to create my projects</p>
 
 ## ♾️ Requirements
 
