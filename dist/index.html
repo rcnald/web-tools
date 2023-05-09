@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Web Tools</title>
+    </head>
+    <body class="c-body">
+        <dialog></dialog>
+
+        <header class="c-header l-header l-wrapper">
+            <img class="o-logo" src="" alt="Logo">
+            <button class="o-button">Adicionar</button>
+            <label class="o-switch l-switch js-switch" for="switch-theme" title="Tema escuro">
+                <input class="o-switch__check l-switch__check" id="switch-theme" type="checkbox">
+                <span class="o-switch__slider l-switch__slider"></span>
+                <span class="sr-only">Tema</span>
+            </label>
+        </header>
+
+        <section class="l-wrapper">
+            <span class="o-logo__title">Web Tools</span>
+
+            <select class="o-select" id="select-content">
+                <option class="o-select__item" value="Desing">Desing</option>
+            </select>
+
+            <span class="o-star">
+                <input class="o-star__check" id="favorite-check" type="checkbox">
+                <label class="sr-only" for="favorite-check">Favoritos</label>
+            </span>
+        </section>
+
+        <main class="c-main l-main l-wrapper">
+            <article class="c-accordion">
+                <div class="l-wrapper">
+                    <div class="c-accordion__logo">
+                        <img class="c-accordion__image" src="" alt="... logo">
+                    </div>
+                    <div class="c-accordion__content">
+                        <h1 class="c-accordion__title">Title</h1>
+                        <p class="c-accordion__description">description</p>
+                    </div>
+                    
+                    <span class="o-star">
+                        <input class="o-star__check" type="checkbox">
+                        <label class="sr-only">Favoritos</label>
+                    </span>
+                </div>
+
+                <button class="c-accordion__button" data-accordion-href="">
+                    <i class='bx bx-chevron-right'></i>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <span class="c-accordion__label">Saber Mais</span>
+                </button>
+            </article>
+        </main>
+    </body>
+    <script src="js/main.js"></script>
+</html>
