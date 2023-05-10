@@ -1,0 +1,14 @@
+$component-name: 'c-header';
+$layout-name: 'l-header';
+
+.#{$component-name}{
+    @apply flex justify-center border-b border-dark-800;
+
+    &__wrapper{
+        @apply grid grid-cols-[repeat(2,0fr),1fr] items-center gap-5 py-4;
+    }
+}
+
+.#{$layout-name}{
+    @apply w-full;
+}

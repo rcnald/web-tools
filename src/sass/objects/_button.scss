@@ -1,0 +1,31 @@
+$object-name: 'o-button';
+$layout-name: 'l-button';
+
+.#{$object-name}{
+    @apply flex items-center px-3 py-1 gap-1 rounded-md bg-primary-800 border border-primary-900 text-neutral-100 text-md;
+}
+
+.#{$layout-name}{
+    
+    &:hover{
+        .#{$layout-name}__label,
+        .#{$layout-name}__icon{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+    
+    &__label,
+    &__icon{
+        @apply transition-all duration-300;
+    }
+
+    &__label{
+        transform: translateX(.6em);
+    }
+    
+    &__icon{
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+}

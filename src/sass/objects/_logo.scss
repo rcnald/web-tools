@@ -1,0 +1,10 @@
+$object-name: 'o-logo';
+$layout-name: 'l-logo';
+
+.#{$object-name}{
+
+}
+
+.#{$layout-name}{
+    @apply max-w-none m-2
+}

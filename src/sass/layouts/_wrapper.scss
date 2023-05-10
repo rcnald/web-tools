@@ -1,0 +1,5 @@
+$layout-name: 'l-wrapper';
+
+.#{$layout-name}{
+    @apply max-w-8xl w-[min(90%,var(--max-width-8xl))];   
+}

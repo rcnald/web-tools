@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <title>Web Tools</title>
@@ -12,14 +12,19 @@
     <body class="c-body">
         <dialog></dialog>
 
-        <header class="c-header l-header l-wrapper">
-            <img class="o-logo" src="" alt="Logo">
-            <button class="o-button">Adicionar</button>
-            <label class="o-switch l-switch js-switch" for="switch-theme" title="Tema escuro">
-                <input class="o-switch__check l-switch__check" id="switch-theme" type="checkbox">
-                <span class="o-switch__slider l-switch__slider"></span>
-                <span class="sr-only">Tema</span>
-            </label>
+        <header class="c-header l-header">
+            <div class="l-wrapper c-header__wrapper">
+                <img class="o-logo l-logo" src="./assets/logo.svg" alt="Logo">
+                <button class="o-button l-button">
+                    <span class="o-button__label l-button__label">Adicionar</span>
+                    <i class="o-button__icon l-button__icon bx bxs-layer-plus"></i>
+                </button>
+                <label class="o-switch l-switch js-switch" for="switch-theme" title="Tema escuro">
+                    <input class="o-switch__check l-switch__check" id="switch-theme" type="checkbox">
+                    <span class="o-switch__slider l-switch__slider"></span>
+                    <span class="sr-only">Tema escuro</span>
+                </label>
+            </div>
         </header>
 
         <section class="l-wrapper">
@@ -53,8 +58,8 @@
                 </div>
 
                 <button class="c-accordion__button" data-accordion-href="">
-                    <i class='bx bx-right-arrow-alt'></i>
-                    <i class='bx bx-chevron-right'></i>
+                    <i class="bx bx-right-arrow-alt"></i>
+                    <i class="bx bx-chevron-right"></i>
                     <span class="c-accordion__label">Saber mais</span>
                 </button>
             </article>

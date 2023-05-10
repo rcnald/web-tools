@@ -21,7 +21,7 @@ module.exports = {
         }
       },
       maxWidth:{
-        'xl': 'var(--max-width-xl)',
+        '8xl': 'var(--max-width-8xl)',
       },
       fontFamily:{
         'primary' : 'var(--ff-primary)'
@@ -31,11 +31,11 @@ module.exports = {
         'semiBold' : 'var(--fw-semiBold)',
       },
       fontSize:{
-        'sm' : 'var(--fs-300)',
-        'md' : 'var(--fs-400)',
-        'base' : 'var(--fs-500)',
-        'lg' : 'var(--fs-700)',
-        'xl' : 'var(--fs-900)',
+        'sm' : ['var(--fs-300)', 'var(--lh-300)'],
+        'md' : ['var(--fs-400)', 'var(--lh-400)'],
+        'base' : ['var(--fs-500)', 'var(--lh-500)'],
+        'lg' : ['var(--fs-700)', 'var(--lh-700)'],
+        'xl' : ['var(--fs-900)', 'var(--lh-900)'],
       }     
     },
   },

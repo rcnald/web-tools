@@ -1,0 +1,78 @@
+$object-name: 'o-switch';
+$layout-name: 'l-switch';
+
+.#{$object-name}{
+    --switch-bg: var(--color-dark-800);
+    
+    @apply block transition-all duration-150;
+
+    &__check{
+        @apply appearance-none;
+
+        &:checked{
+            & + .#{$object-name}__slider{
+                    @apply bg-[var(--switch-bg)];
+            } 
+        }
+    }
+
+    &__slider{
+        @apply cursor-pointer rounded-[1.875rem];
+
+        &::before,
+        &::after{
+            @apply transition-all duration-300;
+        }
+
+        &::before{
+            @apply rounded-[1.875rem] bg-[rgb(219,198,2)];
+        }
+
+        &::after{
+            @apply rounded-full bg-[var(--switch-bg)];
+        }
+    }
+}
+
+.#{$layout-name}{
+    @apply relative w-[3.5em] h-[2em] self-baseline place-self-end;
+
+    &__check{
+        &:checked{
+            & + .#{$object-name}__slider{
+                &::before{
+                    transform: translateX(1.5em);
+                }
+
+                &::after{
+                    @apply w-0 h-0 left-[80%];
+                }
+            } 
+        }
+
+        &:focus{
+            & + .#{$object-name}__slider{
+                box-shadow: 0 0 1px var(--switch-bg)
+            } 
+        }
+    }
+
+    &__slider{
+        @apply absolute inset-0 bg-[var(--switch-bg)];
+
+        &::before,
+        &::after{
+            @apply content-[''] absolute;
+        }
+
+        &::before{
+            --size: 1.4em;
+            @apply w-[var(--size)] h-[var(--size)] left-[0.3em] bottom-[0.3em];
+        }
+
+        &::after{
+            --size: 1.25rem;
+            @apply w-[var(--size)] h-[var(--size)] left-[20%] top-[10%];
+        }
+    }
+}

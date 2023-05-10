@@ -1,0 +1,10 @@
+$component-name: 'c-body';
+$layout-name: 'l-';
+
+.#{$component-name}{
+    @apply flex flex-col items-center font-primary bg-dark-900;
+}
+
+.#{$layout-name}{
+
+}
