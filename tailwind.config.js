@@ -28,7 +28,7 @@ module.exports = {
       },
       fontWeight:{
         'regular' : 'var(--fw-regular)',
-        'semiBold' : 'var(--fw-semiBold)',
+        'semibold' : 'var(--fw-semibold)',
       },
       fontSize:{
         'sm' : ['var(--fs-300)', 'var(--lh-300)'],

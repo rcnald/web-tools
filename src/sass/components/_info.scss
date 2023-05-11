@@ -1,0 +1,24 @@
+$component-name: 'c-info';
+$layout-name: 'l-info';
+
+.#{$component-name}{
+    @apply grid grid-cols-[0fr,1fr] py-6 gap-6;
+}
+
+.#{$layout-name}{
+    &__logo{
+        @apply col-start-1 whitespace-nowrap;
+    }
+
+    &__select{
+        @apply col-start-1;
+    }
+
+    &__star{
+        @apply col-start-2 place-self-end;
+    }
+
+    &__type{
+        @apply col-start-1;
+    }
+}

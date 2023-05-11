@@ -2,7 +2,9 @@ $object-name: 'o-logo';
 $layout-name: 'l-logo';
 
 .#{$object-name}{
-
+    &__name{
+        @apply  font-regular text-primary-800;
+    }
 }
 
 .#{$layout-name}{

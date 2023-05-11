@@ -2,7 +2,7 @@ $object-name: 'o-button';
 $layout-name: 'l-button';
 
 .#{$object-name}{
-    @apply flex items-center px-3 py-1 gap-1 rounded-md bg-primary-800 border border-primary-900 text-neutral-100 text-md;
+    @apply flex relative items-center px-3 py-1 gap-1 rounded-md bg-primary-800 border border-primary-900 text-neutral-100 text-md font-semibold transition-all duration-150; 
 }
 
 .#{$layout-name}{
@@ -13,6 +13,21 @@ $layout-name: 'l-button';
             transform: translateX(0%);
             opacity: 1;
         }
+    }
+
+    &::after{
+        @apply content-[''] absolute inset-0 w-full h-full rounded-md opacity-0 transition-all duration-500; 
+        box-shadow: 0 0 10px 10px var(--color-primary-900);
+        transition: all 0.5s;
+    }
+
+    &:active{
+        transform: translateY(1px);
+
+        &::after{
+            @apply opacity-100 transition-none;
+            box-shadow: 0 0 0 0 var(--color-primary-900);
+        }    
     }
     
     &__label,

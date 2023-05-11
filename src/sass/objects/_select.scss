@@ -1,0 +1,29 @@
+$object-name: 'o-select';
+$layout-name: 'l-select';
+
+.#{$object-name}{
+    &__input{
+        @apply appearance-none outline-none rounded-2xl px-4 pr-8 py-1 bg-dark-800 text-dark-300 transition-all duration-150;
+
+        &:hover{
+            @apply rounded-2xl;
+        }
+
+        &:focus{
+            @apply rounded-b-none;
+        }
+
+        &:hover,
+        &:focus{
+            @apply ring-1 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
+        }
+    }
+
+    option{
+        @apply appearance-none p-2;
+    }
+}
+
+.#{$layout-name}{
+
+}
