@@ -15,10 +15,12 @@
         <header class="c-header l-header">
             <div class="l-wrapper c-header__wrapper">
                 <img class="o-logo l-logo" src="./assets/logo.svg" alt="Logo">
+
                 <button class="o-button l-button">
                     <span class="o-button__label l-button__label">Adicionar</span>
                     <i class="o-button__icon l-button__icon bx bxs-layer-plus"></i>
                 </button>
+
                 <label class="o-switch l-switch js-switch" for="switch-theme" title="Tema escuro">
                     <input class="o-switch__check l-switch__check" id="switch-theme" type="checkbox">
                     <span class="o-switch__slider l-switch__slider"></span>
@@ -30,11 +32,16 @@
         <section class="c-info l-info l-wrapper">
             <span class="o-logo__name l-info__logo">Web Tools</span>
 
-            <div class="o-select l-select l-info__select">
-                <select class="o-select__input l-select__input js-select" id="select-content">
-                    <option class="o-select__item l-select__item" value="Desing">Design</option>
-                    <option class="o-select__item l-select__item" value="Des">Des</option>
-                </select>
+            <div class="o-select l-select">
+                <div class="o-select__selected">
+                    <span class="o-select__placeholder">Select an option</span>
+                    <i class="o-select__arrow bx bx-expand-vertical"></i>
+                </div>
+
+                <ul class="o-select__options l-select__options">
+                    <li class="o-select__option">Design</li>
+                    <li class="o-select__option">Code</li>
+                </ul>
             </div>
 
             <span class="o-star l-info__star">

@@ -2,28 +2,53 @@ $object-name: 'o-select';
 $layout-name: 'l-select';
 
 .#{$object-name}{
-    &__input{
-        @apply appearance-none outline-none rounded-2xl px-4 pr-8 py-1 bg-dark-800 text-dark-300 transition-all duration-150;
+    @apply relative;
 
-        &:hover{
-            @apply rounded-2xl;
+    &:hover{
+        .#{$object-name}__selected{
+            @apply ring-2 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
         }
+    }
 
+    &__selected{
+        @apply flex items-center px-4 py-2 mb-3 rounded-2xl appearance-none outline-none bg-dark-800 text-dark-300 transition-all duration-150;
+
+        &:hover,
         &:focus{
-            @apply rounded-b-none;
+            @apply ring-2 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
+        }
+    }
+
+    &__placeholder{
+        @apply min-w-[150px]
+    }
+
+    &__options{
+        @apply flex flex-col rounded-2xl bg-dark-800 text-dark-300;
+    }
+    
+    &__option{
+        @apply px-4 py-2 transition-all duration-200;
+
+        &:first-child{
+            @apply rounded-t-2xl;
+        }
+        &:last-child{
+            @apply rounded-b-2xl;
         }
 
         &:hover,
         &:focus{
-            @apply ring-1 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
+            @apply cursor-pointer bg-dark-400;
         }
     }
 
-    option{
-        @apply appearance-none p-2;
-    }
 }
 
 .#{$layout-name}{
+    @apply max-w-[200px] w-fit;
 
+    &__options{
+        @apply absolute w-full top-[50px];
+    }
 }
