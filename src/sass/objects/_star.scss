@@ -1,0 +1,23 @@
+$object-name: 'o-star';
+$layout-name: 'l-star';
+
+.#{$object-name}{
+    &__check{
+        @apply bg-star-empty bg-no-repeat appearance-none cursor-pointer has-unpoped;
+        transition: background-image 2s, transform .2s;
+
+        &:hover{
+            @apply scale-110;
+        }
+        
+        &:checked{
+            @apply bg-star-fill has-poped;
+        }
+    }
+}
+
+.#{$layout-name}{
+    &__check{
+        @apply w-[16px] h-[16px];
+    }
+}

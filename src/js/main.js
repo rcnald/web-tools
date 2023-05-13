@@ -7,6 +7,18 @@ const selectedToZero = () => {
     timesSelected = 0
 }
 
+const isSelectActive = () => {
+    if(select.classList.contains('active')){
+        for(let i = 0; i < options.children.length; i++){
+            options.children[i].setAttribute('tabindex', 0)
+        }
+    }else{
+        for(let i = 0; i < options.children.length; i++){
+            options.children[i].removeAttribute('tabindex')
+        }
+    }
+}
+
 const selectActions = e => {
     const element = e.target
     const key = e.key
@@ -23,13 +35,14 @@ const selectActions = e => {
                 selected.blur()
                 selectedToZero()
             }
+            isSelectActive()
         },
         option(){
             selected.value = element.textContent
             select.classList.remove('active')
         }
     }
-
+    
     if(actions[action] && (key === "Enter" || key === undefined)) actions[action]()
 
 }
@@ -39,8 +52,9 @@ select.addEventListener('click', selectActions)
 select.addEventListener('keypress', selectActions)
 
 selected.addEventListener('blur', () => {
-    select.classList.remove('active')
+    isSelectActive()
     selectedToZero()
+    select.classList.remove('active')
 })
 
 for(let i = 0; i < options.children.length; i++){
@@ -49,7 +63,8 @@ for(let i = 0; i < options.children.length; i++){
     })
         
     options.children[i].addEventListener('blur', () => {
-        select.classList.remove('active')
         selectedToZero()
+        select.classList.remove('active')
     })
+    isSelectActive()
 }

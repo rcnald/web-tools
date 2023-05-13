@@ -36,7 +36,11 @@ module.exports = {
         'base' : ['var(--fs-500)', 'var(--lh-500)'],
         'lg' : ['var(--fs-700)', 'var(--lh-700)'],
         'xl' : ['var(--fs-900)', 'var(--lh-900)'],
-      }     
+      },
+      backgroundImage: {
+        'star-empty': "url('../assets/star-empty.svg')",
+        'star-fill': "url('../assets/star-fill.svg')"
+      }
     },
   },
   plugins: [],
