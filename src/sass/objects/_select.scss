@@ -13,6 +13,10 @@ $layout-name: 'l-select';
                 @apply text-dark-300 transition-all duration-200;
             }
         }
+
+        &::selection {
+            background: transparent;
+        }
     }
 
     &__options{
@@ -24,7 +28,7 @@ $layout-name: 'l-select';
         
         &:hover,
         &:focus{
-            @apply cursor-pointer bg-dark-400;
+            @apply cursor-pointer bg-dark-400 outline-none;
         }
 
         &:first-child{
@@ -48,16 +52,12 @@ $layout-name: 'l-select';
         }
     }
 
-    &__wrap{
-        @apply relative;
-    }
-
     &__selected{
-        @apply w-full min-w-[170px];
+        @apply w-full min-w-[170px] select-none;
     }
 
     &__arrow{
-        @apply absolute top-[12px] right-[12px];
+        @apply absolute top-[12px] right-[12px] pointer-events-none;
     }
 
     &__options{
