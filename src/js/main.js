@@ -1,18 +1,26 @@
 const select = document.getElementsByClassName('js-select')[0]
-let selectIsOpen;
+const selected = document.getElementsByClassName('js-selected')[0]
 
-const isOpen = () => {
-    selectIsOpen = !selectIsOpen
+select.addEventListener('click', e => {
+    const element = e.target
+    const action = element.getAttribute('data-action')
 
-    return selectIsOpen
-}
+    if(!action) return
 
-const toggleSelectRadius = () => {
-    if(isOpen()){
-        select.removeEventListener('blur', toggleSelectRadius)
-        select.blur();
+    const actions = {
+        selected(){
+            select.classList.toggle('active')
+        },
+        option(){
+            selected.value = element.textContent
+            select.classList.remove('active')
+        }
     }
-    select.addEventListener('blur', toggleSelectRadius)
-}
 
-select.addEventListener('click', toggleSelectRadius)
+    if(actions[action]) actions[action]()
+
+})
+
+selected.addEventListener('blur', () => {
+    select.classList.remove('active')
+})

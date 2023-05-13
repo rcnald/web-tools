@@ -32,15 +32,15 @@
         <section class="c-info l-info l-wrapper">
             <span class="o-logo__name l-info__logo">Web Tools</span>
 
-            <div class="o-select l-select">
-                <div class="o-select__selected">
-                    <span class="o-select__placeholder">Select an option</span>
-                    <i class="o-select__arrow bx bx-expand-vertical"></i>
+            <div class="o-select l-select l-info__select js-select">
+                <div class="l_select__wrap">
+                    <input class="o-select__selected l-select__selected js-selected" data-action="selected" value="Select an option" readonly>
+                    <i class="o-select__arrow l-select__arrow bx bx-expand-vertical"></i>
                 </div>
 
-                <ul class="o-select__options l-select__options">
-                    <li class="o-select__option">Design</li>
-                    <li class="o-select__option">Code</li>
+                <ul class="o-select__options l-select__options js-options">
+                    <li class="o-select__option l-select__option" style="--delay:1" data-action="option">Design</li>
+                    <li class="o-select__option l-select__option" style="--delay:.5" data-action="option">Code</li>
                 </ul>
             </div>
 

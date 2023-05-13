@@ -2,33 +2,30 @@ $object-name: 'o-select';
 $layout-name: 'l-select';
 
 .#{$object-name}{
-    @apply relative;
-
-    &:hover{
-        .#{$object-name}__selected{
-            @apply ring-2 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
-        }
-    }
-
     &__selected{
-        @apply flex items-center px-4 py-2 mb-3 rounded-2xl appearance-none outline-none bg-dark-800 text-dark-300 transition-all duration-150;
+        @apply flex items-center px-4 py-2 rounded-2xl appearance-none outline-none bg-dark-800 text-dark-300 transition-all duration-150;
 
         &:hover,
         &:focus{
-            @apply ring-2 ring-inset cursor-pointer ring-dark-300 transition-all duration-200;
+            @apply ring-2 ring-inset ring-dark-300 cursor-pointer transition-all duration-200;
+
+            & ~ .#{$object-name}__arrow{
+                @apply text-dark-300 transition-all duration-200;
+            }
         }
     }
 
-    &__placeholder{
-        @apply min-w-[150px]
-    }
-
     &__options{
-        @apply flex flex-col rounded-2xl bg-dark-800 text-dark-300;
+        @apply flex flex-col rounded-2xl;
     }
     
     &__option{
-        @apply px-4 py-2 transition-all duration-200;
+        @apply px-4 py-2 bg-dark-800 text-dark-300 transition-all duration-200;
+        
+        &:hover,
+        &:focus{
+            @apply cursor-pointer bg-dark-400;
+        }
 
         &:first-child{
             @apply rounded-t-2xl;
@@ -37,18 +34,40 @@ $layout-name: 'l-select';
             @apply rounded-b-2xl;
         }
 
-        &:hover,
-        &:focus{
-            @apply cursor-pointer bg-dark-400;
-        }
     }
 
 }
 
 .#{$layout-name}{
-    @apply max-w-[200px] w-fit;
+    @apply max-w-[200px] w-fit relative;
+
+    &.active{
+        & .#{$layout-name}__option{
+            @apply -mb-0 opacity-100;
+            transform: scale(1) translateY(0px);
+        }
+    }
+
+    &__wrap{
+        @apply relative;
+    }
+
+    &__selected{
+        @apply w-full min-w-[170px];
+    }
+
+    &__arrow{
+        @apply absolute top-[12px] right-[12px];
+    }
 
     &__options{
         @apply absolute w-full top-[50px];
+    }
+
+    &__option{
+        @apply origin-top -mb-[45px] opacity-0;
+        transform: scale(0) translateY(-55px);
+        transition: transform .3s ease-in-out,margin-bottom .2s ease-in-out, opacity .2s ease-in-out;
+        transition-delay: calc(.1s * var(--delay));
     }
 }
