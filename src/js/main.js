@@ -1,5 +1,6 @@
 const select = document.getElementsByClassName('js-select')[0]
 const selected = document.getElementsByClassName('js-selected')[0]
+const selectedDisplay = document.getElementsByClassName('js-selected-display')[0]
 const options = document.getElementsByClassName('js-options')[0]
 let timesSelected = 0
 
@@ -39,6 +40,7 @@ const selectActions = e => {
         },
         option(){
             selected.value = element.textContent
+            selectedDisplay.textContent = selected.value
             select.classList.remove('active')
         }
     }
