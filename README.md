@@ -1,4 +1,4 @@
-<h1 align="center">Project Template</h1>
+<h1 align="center">web tools</h1>
 
 <p align="center">An application grouping all the tools for development(by now) that I daily use</p>
 
