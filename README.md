@@ -1,6 +1,7 @@
-<h1 align="center">Web Tools</h1>
+<h1 align="center">Project Template</h1>
 
-<p align="center">A website grouping all webtools that I use to create my projects</p>
+[![en-US](https://img.shields.io/badge/language-en--US-green)](https://github.com/rcnald/web-tools/blob/main/README.md)
+[![pt-BR](https://img.shields.io/badge/language-pt--BR-gray)](https://github.com/rcnald/web-tools/blob/main/README.pt-BR.md)
 
 ## ♾️ Requirements
 
@@ -35,28 +36,29 @@ This project used the following technologies:
 
 ## 🤔 How do I code?
 
-You may questioned yourself, what's those 'letter-{name}' things on HTML classes? It's called [Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/), it's function is inform the type of the element just by seen it. I particular use these:
+You may questioned yourself, what's those 'letter-{name}' things on HTML classes? It's called [Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/), it's function is inform the type of the element and where to find it just by seen it. I particular use these:
   - `o-` - object
   - `c-` - component
   - `l-` - layout
   - `u-` - utilities
   - `t-` - themes
   - `is-/has-` - states
+  - `js-` - DOM elements
 
 ...Ok, you got it right? So... what are those things?
 
 To start the more complex thing in this project is `sass/`, inside of it has a lot of sub folders based on [SMACSS](http://smacss.com) methodology, splitting the code, to an easy maintenance, let me make myseft clear:
 
-### src/sass structure
+### SASS structure
 
-  - `abstract/` - contains variables and global style, like functions and mixins.
-  - `base/` - css reset, default styles.
-  - `components/` - pretty much all the css remains here, remeber: one component equal to one file, inside it has a component styling and a layout styling, usually contains objects and others components in it; context aware made to be independent.
-  - `layouts/` - used to wrapper things up, in a global way.
-  - `objects/` - almost the same thing as components, they are made to be independent, but don't accept other objects or components other than itself.
-  - `states/` - temporary states or conditions, basically animations.
-  - `themes/` - theme style, darkmode, halloween theme...
-  - `utilities/` - css utilities to be used in HTML as classes.
+  - `abstract/`<br> contains global values, as variables, functions and mixins. Styles that can be used through the whole project.
+  - `base/` <br> pre-determinated styles for tags, css reset, pretty munch default styles.
+  - `components/` <br> pretty much all the css remains here, remeber: one component equal to one file, inside it has a component styling and a layout styling, components are context aware and were made to be independent. May contains objects and others components in it.
+  - `layouts/` <br> used to wrapper things up, in a global way, don't requests specifity. All types of situantions/ one layout equal to one file.
+  - `objects/` <br> one object equal to one file, inside it has a object styling and a layout styling, objects aren't context aware and were made to be independent. Mustn't contains components and others objects in it.
+  - `states/` <br> temporary states or conditions, basically animations, transitions.
+  - `themes/` <br> theme style, one theme equal to one file, dark theme, halloween theme, the components/objects are modify to fit it's own theme purpose.
+  - `utilities/` <br> css utilities thats specify certain style to be used in the HTML as classes.
 
 ## 🔮 Credits
 
