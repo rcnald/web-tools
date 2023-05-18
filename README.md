@@ -1,5 +1,7 @@
 <h1 align="center">Project Template</h1>
 
+<p align="center">An application grouping all the tools for development(by now) that I daily use</p>
+
 [![en-US](https://img.shields.io/badge/language-en--US-green)](https://github.com/rcnald/web-tools/blob/main/README.md)
 [![pt-BR](https://img.shields.io/badge/language-pt--BR-gray)](https://github.com/rcnald/web-tools/blob/main/README.pt-BR.md)
 
