@@ -7,12 +7,13 @@ $layout-name: 'l-button';
 
 .#{$layout-name}{
     
-    &:hover,
-    &:focus{
-        .#{$layout-name}__label,
-        .#{$layout-name}__icon{
-            transform: translateX(0%);
-            opacity: 1;
+    &:is(:hover,:focus){
+        .#{$layout-name}{
+            &__label,
+            &__icon{
+                transform: translateX(0%);
+                opacity: 1;
+            }
         }
     }
 
@@ -30,10 +31,10 @@ $layout-name: 'l-button';
         }    
     }
     
-    &__label,
-    &__icon{
+    & :is(&__label,&__icon){
         @apply transition-all duration-300;
     }
+    
 
     &__label{
         transform: translateX(.6em);

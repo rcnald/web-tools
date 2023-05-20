@@ -24,14 +24,15 @@ const selectActions = e => {
     const element = e.target
     const key = e.key
     const action = element.getAttribute('data-action')
-
+    
     if(!action) return
+    
 
     const actions = {
         selected(){
             select.classList.toggle('active')
             timesSelected += 1
-
+            
             if(timesSelected === 2){
                 selected.blur()
                 selectedToZero()

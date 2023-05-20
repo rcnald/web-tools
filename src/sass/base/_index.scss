@@ -1,1 +1,7 @@
 @tailwind base;
+
+@layer base{
+    html{
+        color-scheme: dark;
+    }
+}

@@ -8,5 +8,5 @@ $layout-name: 'l-logo';
 }
 
 .#{$layout-name}{
-    @apply max-w-none m-2
+    @apply max-w-none m-2;
 }
