@@ -4,7 +4,7 @@ $component-name: 'c-accordion';
 $layout-name: 'l-accordion';
 
 .#{$component-name}{
-    @apply grid grid-cols-2 rounded-[1.25rem] p-[var(--accordion-padding)] border-2 border-green-800 bg-red-700;
+    @apply grid grid-cols-2 rounded-[1.25rem] p-[var(--accordion-padding)] bg-red-700;
     transition: flex-basis 500ms;
 
     &__trigger{
@@ -12,7 +12,11 @@ $layout-name: 'l-accordion';
     }
 
     &__title{
-        @apply whitespace-nowrap hidden;
+        @apply whitespace-nowrap;
+
+        @include breakpoint(min,md){
+           @apply hidden;
+        };
     }
     
     &__icon{
@@ -23,10 +27,16 @@ $layout-name: 'l-accordion';
 .#{$layout-name}{
     --accordion-icon-size: 3rem;
     --accordion-padding: 1rem;
-    @apply basis-[calc(var(--accordion-icon-size)+(var(--accordion-padding)*2.2))] overflow-hidden;
+    @apply basis-[calc(var(--accordion-icon-size)+(var(--accordion-padding)*2))] overflow-hidden;
 
     &:has([aria-expanded="true"]){
-        @apply basis-72 bg-green-500;
+        @apply basis-72 grid-rows-[repeat(2,fit-content(100px))];
+
+        & .#{$component-name}__title{
+            @include breakpoint(min,md){
+               @apply block;
+            };
+        }
     }
 
     &:has([aria-expanded="false"]){
