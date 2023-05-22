@@ -52,8 +52,8 @@
             <h1 class="c-info__type l-info__type js-selected-display">Todos</h1>
         </section>
 
-        <main class="c-main l-main l-wrapper">
-            <article class="c-accordion">
+        <main class="c-main l-main l-wrapper js-main">
+            <!-- <article class="c-accordion">
                 <div class="l-wrapper">
                     <div class="c-accordion__logo">
                         <img class="c-accordion__image" src="" alt="... logo">
@@ -74,6 +74,71 @@
                     <i class="bx bx-chevron-right"></i>
                     <span class="c-accordion__label">Saber mais</span>
                 </button>
+            </article> -->
+            <article class="c-accordion l-accordion js-accordion">
+                <h3 class="c-accordion__header" id="accordion-heading-1">
+                    <button class="c-accordion__trigger js-accordion-trigger" aria-expanded="true" aria-controls="accordion-content-1">
+                        <div class="c-accordion__icon l-accordion__icon">
+                            <img class="c-accordion__image l-accordion__image" src="./assets/uiverse.svg" alt="{website.name} icon" aria-hidden="true">
+                        </div>
+                        <span class="c-accordion__title">website name</span>
+                    </button>
+                </h3>
+
+                <span class="o-star l-star l-accordion__star">
+                    <input class="o-star__check l-star__check" id="favorite-check" type="checkbox">
+                    <label class="sr-only" for="favorite-check">Favoritos</label>
+                </span>
+                
+                <div class="c-accordion__content js-accordion-content" id="accordion-content-1" role="region" aria-labelledby="accordion-heading-1" aria-hidden="false">
+                    <p class="c-accordion__description l-accordion__description">some description that anyone can make</p>
+                    
+                </div>
+
+            </article>
+
+            <article class="c-accordion l-accordion js-accordion">
+                <h3 class="c-accordion__header" id="accordion-heading-2">
+                    <button class="c-accordion__trigger js-accordion-trigger" aria-expanded="false" aria-controls="accordion-content-2">
+                        <div class="c-accordion__icon l-accordion__icon">
+                            <img class="c-accordion__image l-accordion__image" src="./assets/uiverse.svg" alt="{website.name} icon" aria-hidden="true">
+                        </div>
+                        <span class="c-accordion__title">website name</span>
+                    </button>
+                </h3>
+                
+                <span class="o-star l-star l-accordion__star">
+                    <input class="o-star__check l-star__check" id="favorite-check" type="checkbox">
+                    <label class="sr-only" for="favorite-check">Favoritos</label>
+                </span>
+                
+                <div class="c-accordion__content js-accordion-content" id="accordion-content-2" role="region" aria-labelledby="accordion-heading-2" aria-hidden="true">
+                    <p class="c-accordion__description l-accordion__description">some description that anyone can make</p>
+                    
+                </div>
+
+            </article>
+
+            <article class="c-accordion l-accordion js-accordion">
+                <h3 class="c-accordion__header" id="accordion-heading-3">
+                    <button class="c-accordion__trigger js-accordion-trigger" aria-expanded="false" aria-controls="accordion-content-3">
+                        <div class="c-accordion__icon l-accordion__icon">
+                            <img class="c-accordion__image l-accordion__image" src="./assets/uiverse.svg" alt="{website.name} icon" aria-hidden="true">
+                        </div>
+                        <span class="c-accordion__title">website name</span>
+                    </button>
+                </h3>
+                
+                <span class="o-star l-star l-accordion__star">
+                    <input class="o-star__check l-star__check" id="favorite-check" type="checkbox">
+                    <label class="sr-only" for="favorite-check">Favoritos</label>
+                </span>
+                
+                <div class="c-accordion__content js-accordion-content" id="accordion-content-3" role="region" aria-labelledby="accordion-heading-3" aria-hidden="true">
+                    <p class="c-accordion__description l-accordion__description">some description that anyone can make</p>
+                    
+                </div>
+
             </article>
         </main>
     </body>

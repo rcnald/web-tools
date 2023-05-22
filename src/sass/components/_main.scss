@@ -1,0 +1,16 @@
+@use '../abstract/' as *;
+
+$component-name: 'c-main';
+$layout-name: 'l-main';
+
+.#{$component-name}{
+    @apply flex flex-col gap-3;
+
+    @include breakpoint(min,md){
+       @apply flex-row;
+    };
+}
+
+.#{$layout-name}{
+    @apply min-h-[300px]
+}
