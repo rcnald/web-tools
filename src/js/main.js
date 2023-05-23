@@ -71,30 +71,3 @@ for(let i = 0; i < options.children.length; i++){
     })
     isSelectActive()
 }
-
-const accordion = document.getElementsByClassName('js-main')[0]
-
-accordion.addEventListener('click', e => {
-    const activeAccordion = e.target.closest(".js-accordion");
-    if(!activeAccordion) return
-
-    openAccordion(activeAccordion)
-})
-// const trigger = [...document.getElementsByClassName('js-trigger')]
-
-const openAccordion = (activeAccordion) => {
-    const triggers = [...document.getElementsByClassName('js-accordion-trigger')]
-    const contents = [...document.getElementsByClassName('js-accordion-content')]
-
-    triggers.forEach(trigger => {
-        trigger.setAttribute('aria-expanded', 'false')
-    })
-
-    contents.forEach(content => {
-        content.setAttribute('aria-hidden', 'true')
-    })
-
-    activeAccordion.getElementsByClassName('js-accordion-trigger')[0].setAttribute('aria-expanded', 'true')
-    activeAccordion.getElementsByClassName('js-accordion-content')[0].setAttribute('aria-hidden', 'false')
-
-}
