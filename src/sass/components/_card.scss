@@ -1,0 +1,18 @@
+$component-name: 'c-card';
+$layout-name: 'l-card';
+
+.#{$component-name}{
+    @apply grid bg-purple-600 rounded-[20px] p-5;
+
+    &__icon{
+        @apply grid place-items-center rounded-full
+    }
+}
+
+.#{$layout-name}{
+    @apply max-w-[300px] w-full aspect-video;
+
+    &__icon{
+        @apply w-[50px] aspect-square bg-neutral-50/25;
+    }
+}
