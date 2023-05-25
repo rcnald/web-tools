@@ -2,6 +2,7 @@ $object-name: 'o-star';
 $layout-name: 'l-star';
 
 .#{$object-name}{
+    @apply flex;
     &__check{
         @apply bg-star-empty bg-no-repeat appearance-none cursor-pointer has-unpoped;
         transition: background-image 2s, transform .2s;
