@@ -2,9 +2,9 @@ $component-name: 'c-main';
 $layout-name: 'l-main';
 
 .#{$component-name}{
-    @apply flex flex-col gap-3;
+    @apply flex flex-wrap gap-3;
 }
 
 .#{$layout-name}{
-    @apply min-h-[300px]
+    // @apply min-h-[300px]
 }

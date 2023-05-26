@@ -17,7 +17,7 @@ $layout-name: 'l-card';
     }
 
     &__button{
-        @apply flex items-center gap-3 p-1 shrink-0;
+        @apply flex items-center gap-3 p-1;
 
         &::after{
             @apply content-[''] rounded-full;
@@ -37,7 +37,7 @@ $layout-name: 'l-card';
     }
 
     &__button{
-        @apply col-span-full relative isolate w-fit;
+        @apply col-span-full relative isolate w-fit self-end justify-self-end;
 
         &:hover{
             &::after{
